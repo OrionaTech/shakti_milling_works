@@ -19,15 +19,15 @@ const benefits = [
   },
   {
     number: "04",
-    title: "Assess before you decide",
+    title: "Priced to make sense",
     description:
-      "We don't promise that every worn tool can be restored. We assess the condition and discuss whether regrinding is practical.",
+      "Regrinding starts at just ₹70 per piece — a fraction of the cost of a new carbide end mill. We don't promise that every worn tool can be restored; we assess the condition and discuss whether regrinding is practical.",
   },
 ];
 
 export default function WhyRegrind() {
   return (
-    <section className="py-20 md:py-28 bg-charcoal text-white">
+    <section className="py-16 md:py-20 bg-charcoal text-white">
       <div className="max-w-6xl mx-auto px-5">
         <div className="grid md:grid-cols-2 gap-16">
           <div>
@@ -35,7 +35,7 @@ export default function WhyRegrind() {
               Why Regrind?
             </p>
 
-            <h2 className="font-black text-4xl md:text-6xl tracking-tight leading-tight">
+            <h2 className="font-black text-3xl md:text-4xl tracking-tight leading-tight">
               Your carbide
               <br />
               tooling is valuable.

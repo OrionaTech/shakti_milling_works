@@ -18,7 +18,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="bg-navy text-white py-20 md:py-28"
+      className="bg-navy text-white py-16 md:py-20"
     >
       <div className="max-w-6xl mx-auto px-5">
         {/* HEADER */}
@@ -27,7 +27,7 @@ export default function Contact() {
             Get A Regrinding Quote
           </p>
 
-          <h2 className="font-black text-4xl md:text-6xl leading-tight tracking-tight">
+          <h2 className="font-black text-3xl md:text-4xl leading-tight tracking-tight">
             Have worn cutters?
             <br />
             <span className="text-spark">
@@ -84,6 +84,10 @@ export default function Contact() {
             <p className="text-xs text-charcoal/40 text-center mt-4">
               We'll discuss your requirement and quotation on WhatsApp.
             </p>
+
+            <p className="text-sm font-semibold text-charcoal/70 text-center mt-3">
+              4mm–20mm range · 24-hour turnaround · <span className="text-spark">From ₹70/piece</span>
+            </p>
           </div>
 
           {/* LOCATION CARD */}
@@ -113,7 +117,7 @@ export default function Contact() {
               </h3>
 
               <p className="text-white/60 mt-3 leading-relaxed">
-                Yamunanagar, Haryana, India
+                Haryana, India
               </p>
 
               <div className="mt-6 grid sm:grid-cols-2 gap-5">
@@ -132,15 +136,6 @@ export default function Contact() {
                   </a>
                 </div>
 
-                <div>
-                  <p className="text-xs uppercase tracking-widest text-white/30">
-                    Service Area
-                  </p>
-
-                  <p className="mt-1 font-semibold text-white">
-                    Pan India
-                  </p>
-                </div>
               </div>
             </div>
           </div>

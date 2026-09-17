@@ -11,7 +11,7 @@ export default function StructuredData() {
     url: "https://shaktimillingworks.orionatech.in",
 
     description:
-      "Tungsten carbide end mill regrinding and resharpening service from Yamunanagar, Haryana, serving CNC machining and manufacturing businesses across India.",
+      "Carbide end mill resharpening, drill bit sharpening, ball nose and radius end mill regrinding service.",
 
     telephone: "+919588321053",
 
@@ -42,6 +42,11 @@ export default function StructuredData() {
       "End Mill Resharpening",
       "CNC End Mill Regrinding",
       "Ball Nose End Mill Regrinding",
+      "Ball Nose End Mill Resharpening",
+      "Drill Bit Regrinding",
+      "Drill Bit Sharpening",
+      "Radius End Mill Regrinding",
+      "Radius End Mill Sharpening",
       "Carbide Cutter Sharpening",
     ],
   };

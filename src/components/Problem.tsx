@@ -1,6 +1,6 @@
 export default function Problem() {
   return (
-    <section className="bg-charcoal text-white py-20 md:py-28">
+    <section className="bg-charcoal text-white py-16 md:py-20">
       <div className="max-w-6xl mx-auto px-5">
         <div className="grid md:grid-cols-2 gap-16">
           <div>
@@ -8,7 +8,7 @@ export default function Problem() {
               The Problem
             </p>
 
-            <h2 className="font-black text-4xl md:text-6xl leading-tight tracking-tight">
+            <h2 className="font-black text-3xl md:text-4xl leading-tight tracking-tight">
               Carbide tools
               <br />
               are an investment.

@@ -198,7 +198,7 @@ export default function Gallery() {
             playsInline
             controls
             preload="metadata"
-            poster="/images/workshop/grinding-machine-poster.jpg"
+            poster="/images/video-poster.jpg"
           >
             <source
               src="/videos/precision-regrinding.mp4"

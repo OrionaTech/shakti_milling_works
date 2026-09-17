@@ -14,3 +14,23 @@ body {
   background-color: var(--color-offwhite);
   color: var(--color-charcoal);
 }
+
+@keyframes hero-fade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.hero-fade {
+  animation: hero-fade 700ms ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-fade {
+    animation: none;
+  }
+}

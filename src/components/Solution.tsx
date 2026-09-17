@@ -25,9 +25,9 @@ const services = [
     desc: "Regrinding solutions for roughing mills, corn cutters and other specialized cutters.",
   },
   {
-    name: "Custom Chamfering Tools",
-    keyword: "Custom Chamfering Tools",
-    desc: "Custom-made Chamfering tools manufactured according to your drawing, dimensions or machining requirement.",
+    name: "Radius End Mill Cutter",
+    keyword: "Radius End Mill Regrinding",
+    desc: "Regrinding of suitable radius end mill cutters to restore their radius and cutting geometry.",
   },
 ];
 
@@ -35,14 +35,14 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="bg-steelgray py-20 md:py-28"
+      className="bg-steelgray py-16 md:py-20"
     >
       <div className="max-w-6xl mx-auto px-5">
         <p className="text-xs font-bold uppercase tracking-widest text-spark mb-4">
           Our Services
         </p>
 
-        <h2 className="font-black text-4xl md:text-6xl tracking-tight max-w-3xl">
+        <h2 className="font-black text-3xl md:text-4xl tracking-tight max-w-3xl">
           Precision regrinding for
           <br />
           <span className="text-charcoal/40">
@@ -55,7 +55,7 @@ export default function Services() {
           ball nose cutter sharpening and custom cutting tool solutions.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-x-12 gap-y-10 mt-16">
+        <div className="grid md:grid-cols-2 gap-x-12 gap-y-10 mt-12">
           {services.map((service, index) => (
             <article
               key={service.name}

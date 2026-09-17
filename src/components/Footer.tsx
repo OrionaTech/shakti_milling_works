@@ -80,9 +80,7 @@ export default function Footer() {
             </p>
 
             <div className="space-y-3 text-sm text-white/60">
-              <p>Yamunanagar, Haryana, India</p>
-
-              <p>Serving Customers Across India</p>
+              <p>Haryana, India</p>
 
               <a
                 href="#contact"

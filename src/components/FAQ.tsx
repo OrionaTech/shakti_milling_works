@@ -37,7 +37,22 @@ const faqs = [
   {
     question: "Where are you located?",
     answer:
-      "Shakti Milling Works is located near PNB Bank in Aurangabad, Yamunanagar, Haryana, and serves customers across India.",
+      "Shakti Milling Works is located near PNB Bank in Aurangabad, Haryana.",
+  },
+  {
+    question: "What is your turnaround time?",
+    answer:
+      "Most orders are reground and ready within 24 hours of receiving the tool, subject to quantity and assessment.",
+  },
+  {
+    question: "What diameter range do you regrind?",
+    answer:
+      "We regrind tungsten carbide end mills ranging from 4mm to 20mm in diameter. Tools outside this range can be discussed on a case-by-case basis.",
+  },
+  {
+    question: "How much does end mill regrinding cost?",
+    answer:
+      "Regrinding starts at ₹70 per piece, with final pricing depending on tool size, geometry, and condition. Send photos on WhatsApp for an exact quote.",
   },
 ];
 
@@ -45,14 +60,14 @@ export default function FAQ() {
   return (
     <section
       id="faq"
-      className="max-w-4xl mx-auto px-5 py-20 md:py-28"
+      className="max-w-4xl mx-auto px-5 py-16 md:py-20"
     >
       <div className="text-center mb-14">
         <p className="text-xs font-bold uppercase tracking-widest text-spark mb-4">
           Frequently Asked Questions
         </p>
 
-        <h2 className="font-black text-4xl md:text-5xl tracking-tight">
+        <h2 className="font-black text-3xl md:text-4xl tracking-tight">
           End Mill Regrinding Questions
         </h2>
       </div>

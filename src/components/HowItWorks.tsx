@@ -21,7 +21,7 @@ const steps = [
     number: "04",
     title: "Regrinding",
     description:
-      "Suitable tools are precision reground according to their required cutting geometry.",
+      "Suitable tools are precision reground and ready for dispatch within 24 hours of receipt.",
   },
 ];
 
@@ -29,13 +29,13 @@ export default function HowItWorks() {
   return (
     <section
       id="how-it-works"
-      className="max-w-6xl mx-auto px-5 py-20 md:py-28"
+      className="max-w-6xl mx-auto px-5 py-16 md:py-20"
     >
       <p className="text-xs font-bold uppercase tracking-widest text-spark mb-4">
         How It Works
       </p>
 
-      <h2 className="font-black text-4xl md:text-6xl tracking-tight">
+      <h2 className="font-black text-3xl md:text-4xl tracking-tight">
         Simple process.
         <br />
         <span className="text-charcoal/40">
@@ -43,7 +43,7 @@ export default function HowItWorks() {
         </span>
       </h2>
 
-      <div className="grid md:grid-cols-2 gap-x-16 gap-y-12 mt-16">
+      <div className="grid md:grid-cols-2 gap-x-16 gap-y-12 mt-12">
         {steps.map((step) => (
           <div
             key={step.number}

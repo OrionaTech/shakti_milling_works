@@ -15,12 +15,12 @@ export const metadata: Metadata = {
 
   title: {
     default:
-      "Tungsten Carbide End Mill Regrinding & Sharpening | Shakti Milling Works",
+      "Carbide End Mill Resharpening & Regrinding | Shakti Milling Works",
     template: "%s | Shakti Milling Works",
   },
 
   description:
-    "Tungsten carbide end mill regrinding and resharpening from Yamunanagar, Haryana. Restore suitable worn carbide end mills and get more value from expensive CNC cutting tools. Serving customers across India.",
+    "Carbide end mill resharpening, drill bit sharpening, ball nose and radius end mill regrinding. 4mm–20mm service, 24-hour turnaround, from ₹70/piece.",
 
   keywords: [
     "tungsten carbide end mill regrinding",
@@ -30,19 +30,26 @@ export const metadata: Metadata = {
     "end mill regrinding",
     "end mill sharpening",
     "end mill resharpening",
+    "carbide end mill resharpening",
+    "end mill resharpening service",
     "carbide cutter regrinding",
     "carbide cutter sharpening",
     "CNC end mill regrinding",
     "CNC end mill sharpening",
     "ball nose end mill regrinding",
+    "ball nose end mill resharpening",
     "ball nose carbide end mill sharpening",
+    "drill bit regrinding",
+    "drill bit sharpening",
+    "carbide drill bit sharpening",
+    "radius end mill regrinding",
+    "radius end mill sharpening",
+    "radius end mill resharpening",
     "carbide cutting tool regrinding",
     "cutting tool sharpening",
     "end mill regrinding India",
     "carbide end mill regrinding India",
     "end mill regrinding Haryana",
-    "end mill regrinding Yamunanagar",
-    "carbide tool regrinding Yamunanagar",
   ],
 
   authors: [
@@ -78,10 +85,10 @@ export const metadata: Metadata = {
     siteName: "Shakti Milling Works",
 
     title:
-      "Tungsten Carbide End Mill Regrinding & Sharpening | Shakti Milling Works",
+      "Carbide End Mill Resharpening & Regrinding | Shakti Milling Works",
 
     description:
-      "Professional tungsten carbide end mill regrinding and resharpening from Yamunanagar, Haryana. Get more life from suitable worn carbide end mills.",
+      "Carbide end mill resharpening, drill bit sharpening, ball nose and radius end mill regrinding. From ₹70/piece.",
 
     images: [
       {
@@ -97,10 +104,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
 
     title:
-      "Tungsten Carbide End Mill Regrinding | Shakti Milling Works",
+      "Carbide End Mill Resharpening | Shakti Milling Works",
 
     description:
-      "Professional carbide end mill regrinding and sharpening from Yamunanagar, Haryana.",
+      "End mill resharpening, drill bit sharpening, ball nose and radius end mill regrinding from ₹70/piece.",
 
     images: ["/images/og-image.jpg"],
   },

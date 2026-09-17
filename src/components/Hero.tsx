@@ -1,31 +1,28 @@
 export default function Hero() {
   return (
-    <section className="max-w-6xl mx-auto px-5 pt-16 pb-24 md:pt-24 md:pb-28">
-      <p className="text-xs md:text-sm font-bold uppercase tracking-widest text-spark mb-6">
-        Tungsten Carbide End Mill Regrinding · Yamunanagar · Pan India
+    <section className="max-w-6xl mx-auto px-5 pt-14 pb-16 md:pt-20 md:pb-20">
+      <p className="text-xs font-bold uppercase tracking-widest text-spark mb-5">
+        Carbide End Mill Regrinding
       </p>
 
-      <h1 className="font-black leading-[0.92] tracking-tight text-5xl sm:text-6xl md:text-7xl lg:text-8xl max-w-6xl">
-        Don&apos;t replace
+      <h1 className="font-black leading-[1.03] tracking-tight text-4xl sm:text-5xl md:text-6xl max-w-4xl">
+        Don&apos;t replace an expensive
         <br />
-        an expensive
+        carbide end mill.
         <br />
-        <span className="text-spark">
-          carbide end mill.
+        <span className="hero-fade text-spark">
+          Regrind &amp; Resharpen from ₹70.
         </span>
       </h1>
 
-      <div className="mt-14 grid md:grid-cols-2 gap-10 items-end">
+      <div className="mt-10 grid md:grid-cols-2 gap-10 items-end">
         <div>
-          <p className="text-xl md:text-2xl text-charcoal/80 leading-relaxed max-w-xl">
-            If your tungsten carbide end mill has become dull or worn,
-            it may not need to go straight into the scrap box.
+          <p className="text-lg md:text-xl text-charcoal/80 leading-relaxed max-w-xl">
+            Suitable 4mm–20mm carbide end mills can often be reground instead of replaced.
           </p>
 
           <p className="mt-5 text-charcoal/60 max-w-lg leading-relaxed">
-            We specialize in tungsten carbide end mill regrinding and
-            resharpening, helping machining businesses get more value
-            from suitable worn cutting tools.
+            Most orders are ready within 24 hours of tool receipt. Final pricing depends on size, geometry and condition.
           </p>
         </div>
 
@@ -43,6 +40,10 @@ export default function Hero() {
 
           <p className="text-xs text-charcoal/40 mt-3">
             Send us photos of your tools on WhatsApp.
+          </p>
+
+          <p className="mt-3 text-sm font-semibold text-charcoal/70">
+            Starting at <span className="text-spark">₹70 per piece</span>
           </p>
         </div>
       </div>
