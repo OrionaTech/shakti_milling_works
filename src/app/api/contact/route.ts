@@ -7,7 +7,7 @@ export async function POST(req: Request) {
   const { name, phone, toolType, message } = await req.json();
 
   await resend.emails.send({
-    from: "Shakti Milling Works <onboarding@orionatech.in>", // TODO: swap once your domain is verified in Resend
+    from: "Shakti Milling Works <balram@shaktimillingworks.com>",
     to: "developer.balram@gmail.com", // TODO: your real inbox
     subject: `New quote request from ${name}`,
     text: `Name: ${name}\nPhone: ${phone}\nTool: ${toolType}\nMessage: ${message}`,

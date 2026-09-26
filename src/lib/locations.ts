@@ -1,4 +1,4 @@
-export const siteUrl = "https://shaktimillingworks.orionatech.in";
+export const siteUrl = "https://shaktimillingworks.in";
 
 export const business = {
   name: "Shakti Milling Works",

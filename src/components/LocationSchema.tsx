@@ -9,9 +9,9 @@ export default function LocationSchema({ areaServed, serviceName }: LocationSche
   const data = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://shaktimillingworks.orionatech.in/#business",
+    "@id": "https://shaktimillingworks.in/#business",
     name: business.name,
-    url: "https://shaktimillingworks.orionatech.in",
+    url: "https://shaktimillingworks.in",
     telephone: business.telephone,
     priceRange: "₹70–₹₹",
     openingHours: "Mo-Sa 09:00-18:00",
