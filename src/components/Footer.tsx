@@ -80,7 +80,7 @@ export default function Footer() {
             </p>
 
             <div className="space-y-3 text-sm text-white/60">
-              <p>Haryana, India</p>
+              <p>Near PNB Bank, Aurangabad, Yamuna Nagar, Haryana 135001, India</p>
 
               <a
                 href="#contact"

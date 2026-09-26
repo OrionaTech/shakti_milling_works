@@ -36,9 +36,9 @@ export default function Contact() {
           </h2>
 
           <p className="mt-7 text-white/60 text-lg leading-relaxed max-w-2xl">
-            Don't worry if you don't know the exact tool specification.
+            Don&apos;t worry if you don&apos;t know the exact tool specification.
             Send us clear photos of your end mills, drills or other cutting
-            tools on WhatsApp. We'll review the tools and discuss the
+            tools on WhatsApp. We&apos;ll review the tools and discuss the
             regrinding possibilities with you.
           </p>
         </div>
@@ -82,7 +82,7 @@ export default function Contact() {
             </a>
 
             <p className="text-xs text-charcoal/40 text-center mt-4">
-              We'll discuss your requirement and quotation on WhatsApp.
+              We&apos;ll discuss your requirement and quotation on WhatsApp.
             </p>
 
             <p className="text-sm font-semibold text-charcoal/70 text-center mt-3">
@@ -117,7 +117,7 @@ export default function Contact() {
               </h3>
 
               <p className="text-white/60 mt-3 leading-relaxed">
-                Haryana, India
+                Near PNB Bank, Aurangabad, Yamuna Nagar, Haryana 135001, India
               </p>
 
               <div className="mt-6 grid sm:grid-cols-2 gap-5">

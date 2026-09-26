@@ -12,6 +12,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import StructuredData from "@/components/StructuredData";
 import TrustStrip from "@/components/TrustStrip";
+import ServiceCoverage from "@/components/ServiceCoverage";
 
 export default function Home() {
   return (
@@ -36,6 +37,8 @@ export default function Home() {
         <HowItWorks />
 
         <Industries />
+
+        <ServiceCoverage />
 
         <FAQ />
 

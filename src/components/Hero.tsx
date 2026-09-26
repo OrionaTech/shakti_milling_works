@@ -1,3 +1,6 @@
+import Link from "next/link";
+import GeoServiceBanner from "@/components/GeoServiceBanner";
+
 export default function Hero() {
   return (
     <section className="max-w-6xl mx-auto px-5 pt-14 pb-16 md:pt-20 md:pb-20">
@@ -24,6 +27,11 @@ export default function Hero() {
           <p className="mt-5 text-charcoal/60 max-w-lg leading-relaxed">
             Most orders are ready within 24 hours of tool receipt. Final pricing depends on size, geometry and condition.
           </p>
+
+          <p className="mt-4 text-charcoal/60 max-w-lg leading-relaxed">
+            Faster local coordination is available for <Link href="/locations/yamunanagar" className="underline">Yamunanagar</Link>, <Link href="/locations/ambala" className="underline">Ambala</Link>, <Link href="/locations/jagadhri" className="underline">Jagadhri</Link> and <Link href="/locations/karnal" className="underline">Karnal</Link>.
+          </p>
+          <div className="mt-4"><GeoServiceBanner /></div>
         </div>
 
         <div className="md:flex md:flex-col md:items-end">

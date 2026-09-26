@@ -30,7 +30,7 @@ export default function Problem() {
 
             <div>
               <h3 className="font-bold text-xl mb-3">
-                Tungsten carbide end mills aren't cheap
+                Tungsten carbide end mills aren&apos;t cheap
               </h3>
 
               <p className="text-white/60 leading-relaxed">

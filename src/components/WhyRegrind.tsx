@@ -42,7 +42,7 @@ export default function WhyRegrind() {
             </h2>
 
             <p className="mt-7 text-white/50 text-lg leading-relaxed max-w-lg">
-              Don't automatically treat a worn end mill as a disposable
+              Don&apos;t automatically treat a worn end mill as a disposable
               tool. Find out whether it can be professionally reground.
             </p>
           </div>
