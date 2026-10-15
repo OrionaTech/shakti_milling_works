@@ -24,13 +24,13 @@ export default function Home() {
       <main>
         <Hero />
 
+        <Gallery />
+
         <TrustStrip />
 
         <Problem />
 
         <Solution />
-
-        <Gallery />
 
         <WhyRegrind />
 

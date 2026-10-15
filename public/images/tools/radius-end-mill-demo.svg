@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" rx="16" fill="#EDF1F5"/>
+  <path d="M182 48h36v128l-9 38a18 18 0 0 1-36 0l9-38V48Z" fill="#748797" stroke="#33485A" stroke-width="5"/>
+  <path d="m182 166 43-36M177 196l48-41M178 221l39-31" stroke="#C7D5DF" stroke-width="8"/>
+  <path d="M200 49v128" stroke="#F7F8FA" stroke-opacity=".6" stroke-width="5"/>
+  <text x="20" y="276" fill="#526577" font-family="Arial,sans-serif" font-size="14" letter-spacing="2">DEMO TOOL IMAGE</text>
+</svg>

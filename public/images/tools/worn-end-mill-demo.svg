@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800" fill="none">
+  <rect width="400" height="800" fill="#E9EDF0"/>
+  <path d="M30 90h340M30 710h340" stroke="#C7D0D7" stroke-width="2"/>
+  <text x="32" y="62" fill="#687782" font-family="Arial,sans-serif" font-size="16" letter-spacing="3">DEMO / BEFORE</text>
+  <g transform="rotate(8 200 400)">
+    <path d="m200 165 66 47v345l-31 116h-70l-31-116V212l66-47Z" fill="#71808A" stroke="#36454F" stroke-width="8"/>
+    <path d="m136 443 128-104M136 498l128-104M142 552l116-94M165 632l94-77" stroke="#B8C4CA" stroke-width="17"/>
+    <path d="m200 168 3 503" stroke="#DEE4E7" stroke-opacity=".6" stroke-width="7"/>
+    <path d="m171 667 20-42 16 15 22-42 15 48-5 27h-70l-6-6 8-16Z" fill="#D38A36" stroke="#8D5427" stroke-width="6"/>
+    <path d="m189 645 16 10 22-31" stroke="#F4C47C" stroke-width="8"/>
+  </g>
+  <text x="32" y="755" fill="#36454F" font-family="Arial,sans-serif" font-size="19" letter-spacing="2">WORN CARBIDE END MILL</text>
+</svg>

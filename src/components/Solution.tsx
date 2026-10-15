@@ -1,33 +1,47 @@
+import Image from "next/image";
+
 const services = [
   {
     name: "End Mill Regrinding",
     keyword: "Carbide End Mill Sharpening",
     desc: "Regrinding of suitable carbide end mills to restore cutting edges and usable geometry.",
+    image: "/images/tools/end-mill-demo.svg",
+    imageAlt: "Demo image of an end mill",
   },
   {
     name: "Ball Nose End Mill Regrinding",
     keyword: "Ball Nose Cutter Sharpening",
     desc: "Restore ball nose radius and cutting geometry for contour, profile and precision machining.",
+    image: "/images/tools/ball-nose-demo.svg",
+    imageAlt: "Demo image of a ball nose end mill",
   },
   {
     name: "Drill Bit Regrinding",
     keyword: "Carbide Drill Sharpening",
     desc: "Regrinding suitable drills to restore their cutting geometry and drilling performance.",
+    image: "/images/tools/drill-bit-demo.svg",
+    imageAlt: "Demo image of a carbide drill bit",
   },
   {
     name: "Chamfer Tool Regrinding",
     keyword: "Chamfer Cutter Sharpening",
     desc: "Restore chamfer cutter angles and cutting edges for consistent machining results.",
+    image: "/images/tools/chamfer-tool-demo.svg",
+    imageAlt: "Demo image of a chamfer cutter",
   },
   {
     name: "Roughing Cutter Regrinding",
     keyword: "Roughing End Mill Regrinding",
     desc: "Regrinding solutions for roughing mills, corn cutters and other specialized cutters.",
+    image: "/images/tools/roughing-cutter-demo.svg",
+    imageAlt: "Demo image of a roughing cutter",
   },
   {
     name: "Radius End Mill Cutter",
     keyword: "Radius End Mill Regrinding",
     desc: "Regrinding of suitable radius end mill cutters to restore their radius and cutting geometry.",
+    image: "/images/tools/radius-end-mill-demo.svg",
+    imageAlt: "Demo image of a radius end mill",
   },
 ];
 
@@ -61,6 +75,17 @@ export default function Services() {
               key={service.name}
               className="border-t border-charcoal/10 pt-6"
             >
+              <div className="relative mb-5 h-[150px] w-[200px] overflow-hidden rounded-md bg-charcoal/5">
+                <Image
+                  src={service.image}
+                  alt={service.imageAlt}
+                  fill
+                  sizes="200px"
+                  quality={65}
+                  unoptimized={service.image.endsWith(".svg")}
+                  className="object-cover"
+                />
+              </div>
               <div className="flex justify-between gap-6">
                 <div>
                   <p className="text-xs font-bold uppercase tracking-wider text-navy mb-2">

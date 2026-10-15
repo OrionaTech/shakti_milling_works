@@ -7,7 +7,16 @@
   --color-offwhite: #F7F8FA;
   --color-steelgray: #EDF1F5;
   --color-trust: #3A8A5E;
-  --font-sans: var(--font-inter);
+  --font-sans: Arial, Helvetica, sans-serif;
+  --font-weight-thin: 400;
+  --font-weight-extralight: 400;
+  --font-weight-light: 400;
+  --font-weight-normal: 400;
+  --font-weight-medium: 400;
+  --font-weight-semibold: 400;
+  --font-weight-bold: 400;
+  --font-weight-extrabold: 400;
+  --font-weight-black: 400;
 }
 
 body {
