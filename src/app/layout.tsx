@@ -120,6 +120,7 @@ export default function RootLayout({
     <html lang="en-IN">
       <body className="antialiased font-sans">
         {children}
+        <Analytics />
       </body>
     </html>
   );
