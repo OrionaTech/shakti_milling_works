@@ -265,7 +265,6 @@ export default function Gallery() {
             muted
             loop
             playsInline
-            controls
             preload="metadata"
             poster="/images/after/end-mill-after-1.jpeg"
           >
