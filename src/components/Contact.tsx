@@ -1,4 +1,6 @@
-const phone = "918572068977"; // Replace with your Indian WhatsApp number
+import PricingGuide from "@/components/PricingGuide";
+import TrackedLink from "@/components/TrackedLink";
+import { site } from "@/lib/site";
 
 const whatsappMessage = encodeURIComponent(
   `Hi Shakti Milling Works,
@@ -12,7 +14,9 @@ Tool Size:
 I can share photos of the tools for assessment and quotation.`
 );
 
-const whatsappLink = `https://wa.me/${phone}?text=${whatsappMessage}`;
+const whatsappLink = site.contact.whatsappE164
+  ? `https://wa.me/${site.contact.whatsappE164}?text=${whatsappMessage}`
+  : "#contact-details";
 
 export default function Contact() {
   return (
@@ -72,39 +76,31 @@ export default function Contact() {
               <p>✓ Your regrinding requirement</p>
             </div>
 
-            <a
+            <TrackedLink
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
+              eventName="whatsapp_click"
+              eventParameters={{ placement: "contact_card" }}
               className="inline-flex items-center justify-center mt-8 w-full bg-trust text-white font-bold px-6 py-4 rounded-md hover:bg-charcoal transition-colors"
             >
               WhatsApp Your Tools →
-            </a>
+            </TrackedLink>
 
             <p className="text-xs text-charcoal/40 text-center mt-4">
               We&apos;ll discuss your requirement and quotation on WhatsApp.
             </p>
 
-            <p className="text-sm font-semibold text-charcoal/70 text-center mt-3">
-              4mm–20mm range · 24-hour turnaround · <span className="text-spark">From ₹70/piece</span>
-            </p>
+            <PricingGuide />
           </div>
 
           {/* LOCATION CARD */}
           <div className="bg-white/10 border border-white/10 rounded-xl overflow-hidden">
 
-            {/* GOOGLE MAP */}
-            <div className="w-full h-[280px] bg-white/5">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3451.6701240419247!2d77.22839737534731!3d30.103632474893907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ef942dbc03141%3A0xc9e820f8a58b7917!2sSHAKTI%20MILLING%20WORKS!5e0!3m2!1sen!2sin!4v1786432908069!5m2!1sen!2sin"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                loading="lazy"
-                allowFullScreen
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Shakti Milling Works location"
-              />
+            <div className="flex h-[280px] items-center justify-center bg-white/5 p-8 text-center text-white/60">
+              <a href={site.mapsDirectionsUrl} target="_blank" rel="noopener noreferrer" className="rounded-md border border-white/30 px-5 py-3 font-bold text-white hover:border-spark hover:text-spark transition-colors">
+                Get directions to Shakti Milling Works
+              </a>
             </div>
 
             <div className="p-7 md:p-8">
@@ -116,24 +112,24 @@ export default function Contact() {
                 Shakti Milling Works
               </h3>
 
-              <p className="text-white/60 mt-3 leading-relaxed">
-                Near PNB Bank, Aurangabad, Yamuna Nagar, Haryana 135001, India
-              </p>
+              <p id="contact-details" className="text-white/60 mt-3 leading-relaxed">{site.address}</p>
 
               <div className="mt-6 grid sm:grid-cols-2 gap-5">
                 <div>
-                  <p className="text-xs uppercase tracking-widest text-white/30">
-                    WhatsApp
-                  </p>
-
-                  <a
-                    href={whatsappLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block mt-1 font-semibold text-white hover:text-spark transition-colors"
-                  >
-                    +91 8572068977
-                  </a>
+                  <p className="text-xs uppercase tracking-widest text-white/30">WhatsApp</p>
+                  <p className="mt-1 font-semibold text-white">{site.contact.primaryPhoneDisplay}</p>
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-widest text-white/30">Call</p>
+                  {site.contact.primaryPhoneE164 ? (
+                    <TrackedLink href={`tel:${site.contact.primaryPhoneE164}`} eventName="tel_click" eventParameters={{ placement: "contact_card" }} className="mt-1 inline-block font-semibold text-white hover:text-spark transition-colors">
+                      {site.contact.primaryPhoneDisplay}
+                    </TrackedLink>
+                  ) : <p className="mt-1 font-semibold text-white">TODO: confirm phone number</p>}
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-widest text-white/30">Opening hours</p>
+                  <p className="mt-1 font-semibold text-white">{site.contact.hours}</p>
                 </div>
 
               </div>
@@ -153,14 +149,16 @@ export default function Contact() {
             </p>
           </div>
 
-          <a
+          <TrackedLink
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
+            eventName="whatsapp_click"
+            eventParameters={{ placement: "contact_bottom_cta" }}
             className="inline-flex items-center justify-center bg-spark text-charcoal font-bold px-6 py-3 rounded-md hover:bg-white transition-colors whitespace-nowrap"
           >
             Get A Quote on WhatsApp →
-          </a>
+          </TrackedLink>
         </div>
       </div>
     </section>

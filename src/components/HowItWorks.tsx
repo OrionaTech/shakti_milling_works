@@ -21,7 +21,7 @@ const steps = [
     number: "04",
     title: "Regrinding",
     description:
-      "Suitable tools are precision reground and ready for dispatch within 24 hours of receipt.",
+      "Local orders typically take 24 hours. Courier orders are typically ready 24 hours after the courier is accepted, subject to assessment.",
   },
 ];
 

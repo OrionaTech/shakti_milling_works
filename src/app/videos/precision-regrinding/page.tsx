@@ -1,27 +1,16 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { siteUrl } from "@/lib/locations";
+import { pageMetadata } from "@/lib/metadata";
+import { site } from "@/lib/site";
 
-const pageUrl = `${siteUrl}/videos/precision-regrinding`;
-const videoUrl = `${siteUrl}/videos/precision-regrinding.mp4`;
-const thumbnailUrl = `${siteUrl}/images/after/end-mill-after-1.jpeg`;
+const pageUrl = `${site.url}/videos/precision-regrinding`;
+const videoUrl = `${site.url}/videos/precision-regrinding.mp4`;
+const thumbnailUrl = `${site.url}/images/after/end-mill-after-1.jpeg`;
 
-export const metadata: Metadata = {
-  title: "Precision Carbide End Mill Regrinding Video",
-  description:
-    "Watch tungsten carbide end mills being precision reground to restore their cutting edges and geometry.",
-  alternates: {
-    canonical: pageUrl,
-  },
-  openGraph: {
-    type: "video.other",
-    title: "Precision Carbide End Mill Regrinding",
-    description:
-      "Watch the precision grinding process for restoring tungsten carbide end mills.",
-    videos: [{ url: videoUrl, type: "video/mp4" }],
-    images: [thumbnailUrl],
-  },
-};
+export function generateMetadata(): Metadata {
+  const description = "Watch the carbide end mill regrinding process from Shakti Milling Works.";
+  return { ...pageMetadata({ title: "Precision Carbide End Mill Regrinding Video", description, path: "/videos/precision-regrinding", type: "video.other" }), openGraph: { type: "video.other", url: pageUrl, title: "Precision Carbide End Mill Regrinding Video", description, videos: [{ url: videoUrl, type: "video/mp4" }], images: [thumbnailUrl] } };
+}
 
 const videoObject = {
   "@context": "https://schema.org",
@@ -36,7 +25,7 @@ const videoObject = {
   publisher: {
     "@type": "Organization",
     name: "Shakti Milling Works",
-    url: siteUrl,
+    url: site.url,
   },
 };
 
@@ -58,10 +47,10 @@ export default function PrecisionRegrindingVideoPage() {
           className="aspect-[9/16] max-h-[75vh] w-auto max-w-full rounded-sm"
           controls
           playsInline
-          preload="metadata"
-          poster={thumbnailUrl.replace(siteUrl, "")}
+          preload="none"
+          poster={thumbnailUrl.replace(site.url, "")}
         >
-          <source src={videoUrl.replace(siteUrl, "")} type="video/mp4" />
+          <source src={videoUrl.replace(site.url, "")} type="video/mp4" />
           Your browser does not support embedded video.
         </video>
       </div>

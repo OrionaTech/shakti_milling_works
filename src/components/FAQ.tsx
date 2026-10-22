@@ -1,3 +1,5 @@
+import { pricing, site } from "@/lib/site";
+
 const faqs = [
   {
     question: "Can tungsten carbide end mills be reground?",
@@ -37,22 +39,22 @@ const faqs = [
   {
     question: "Where are you located?",
     answer:
-      "Shakti Milling Works is located near PNB Bank in Aurangabad, Haryana.",
+      `Shakti Milling Works has its premises at ${site.address}.`,
   },
   {
     question: "What is your turnaround time?",
     answer:
-      "Most orders are reground and ready within 24 hours of receiving the tool, subject to quantity and assessment.",
+      "Local orders typically take 24 hours. Courier orders are typically ready 24 hours after the courier is accepted, subject to tool assessment.",
   },
   {
     question: "What diameter range do you regrind?",
     answer:
-      "We regrind tungsten carbide end mills ranging from 4mm to 20mm in diameter. Tools outside this range can be discussed on a case-by-case basis.",
+      "We support suitable tungsten carbide end mills from 4 mm to 20 mm in diameter. Share clear tool photos and dimensions for assessment.",
   },
   {
     question: "How much does end mill regrinding cost?",
     answer:
-      "Regrinding starts at ₹70 per piece, with final pricing depending on tool size, geometry, and condition. Send photos on WhatsApp for an exact quote.",
+      `Public pricing: ${pricing.startingAt}. Final pricing depends on tool size, geometry, condition and the required work.`,
   },
 ];
 

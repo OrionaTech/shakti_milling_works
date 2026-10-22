@@ -1,8 +1,10 @@
+import { pricing } from "@/lib/site";
+
 const trustPoints = [
-  { label: "Operating since", value: "2020" },
-  { label: "Carbide end mills", value: "4mm–20mm" },
-  { label: "Typical turnaround", value: "24 hours" },
-  { label: "Regrinding from", value: "₹70 / piece" },
+  { label: "Premises", value: "Yamunanagar, Haryana" },
+  { label: "Service", value: "Carbide tool regrinding" },
+  { label: "Courier support", value: "Pan-India" },
+  { label: "Public pricing", value: pricing.startingAt },
 ];
 
 export default function TrustStrip() {

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { getTierOneLocationByCity } from "@/lib/locations";
+import { getTierOneLocationByCity } from "@/lib/site";
 
 function cookie(name: string) {
   return document.cookie.split("; ").find((entry) => entry.startsWith(`${name}=`))?.split("=")[1];

@@ -13,6 +13,18 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import StructuredData from "@/components/StructuredData";
 import TrustStrip from "@/components/TrustStrip";
 import ServiceCoverage from "@/components/ServiceCoverage";
+import FlyerDownload from "@/components/FlyerDownload";
+import Testimonials from "@/components/Testimonials";
+import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
+
+export function generateMetadata(): Metadata {
+  return pageMetadata({
+    title: "End Mill Regrinding in Yamunanagar | Shakti",
+    description: "End mill regrinding in Yamunanagar, Haryana, from Shakti Milling Works. Courier orders are accepted from across India.",
+    path: "/",
+  });
+}
 
 export default function Home() {
   return (
@@ -23,7 +35,6 @@ export default function Home() {
 
       <main>
         <Hero />
-
         <Gallery />
 
         <TrustStrip />
@@ -39,8 +50,10 @@ export default function Home() {
         <Industries />
 
         <ServiceCoverage />
+        <FlyerDownload />
 
         <FAQ />
+        <Testimonials />
 
         <Contact />
       </main>

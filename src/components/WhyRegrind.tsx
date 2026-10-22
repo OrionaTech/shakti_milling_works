@@ -1,3 +1,5 @@
+import { pricing } from "@/lib/site";
+
 const benefits = [
   {
     number: "01",
@@ -21,13 +23,13 @@ const benefits = [
     number: "04",
     title: "Priced to make sense",
     description:
-      "Regrinding starts at just ₹70 per piece — a fraction of the cost of a new carbide end mill. We don't promise that every worn tool can be restored; we assess the condition and discuss whether regrinding is practical.",
+      `Public pricing: ${pricing.startingAt}. We don't promise that every worn tool can be restored; we assess the condition and discuss whether regrinding is practical.`,
   },
 ];
 
 export default function WhyRegrind() {
   return (
-    <section className="py-16 md:py-20 bg-charcoal text-white">
+    <section id="why-regrind" className="py-16 md:py-20 bg-charcoal text-white">
       <div className="max-w-6xl mx-auto px-5">
         <div className="grid md:grid-cols-2 gap-16">
           <div>

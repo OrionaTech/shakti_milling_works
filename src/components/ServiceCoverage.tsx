@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { tierOneLocations } from "@/lib/locations";
+import { tierOneLocations } from "@/lib/site";
 
 export default function ServiceCoverage() {
   return (

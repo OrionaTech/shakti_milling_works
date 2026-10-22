@@ -1,4 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
+import { site } from "@/lib/site";
+import { services } from "@/lib/content";
+import { tierOneLocations } from "@/lib/site";
 
 export default function Footer() {
   return (
@@ -8,8 +12,8 @@ export default function Footer() {
 
           {/* BRAND */}
           <div>
-            <a
-              href="#"
+            <Link
+              href="/"
               aria-label="Shakti Milling Works"
               className="relative block w-[190px] h-[90px] overflow-hidden"
             >
@@ -20,7 +24,7 @@ export default function Footer() {
                 height={2000}
                 className="absolute w-[230px] h-[230px] max-w-none left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
               />
-            </a>
+            </Link>
 
           <p className="text-white/40 text-sm mt-5 max-w-sm leading-relaxed">
             Shakti Milling Works specializes in tungsten carbide end mill
@@ -35,42 +39,7 @@ export default function Footer() {
               Services
             </p>
 
-            <div className="space-y-3 text-sm text-white/60">
-              <a
-                href="#services"
-                className="block hover:text-spark transition-colors"
-              >
-                End Mill Regrinding
-              </a>
-
-              <a
-                href="#services"
-                className="block hover:text-spark transition-colors"
-              >
-                Ball Nose Regrinding
-              </a>
-
-              <a
-                href="#services"
-                className="block hover:text-spark transition-colors"
-              >
-                Drill Bit Regrinding
-              </a>
-
-              <a
-                href="#services"
-                className="block hover:text-spark transition-colors"
-              >
-                Carbide Tool Sharpening
-              </a>
-
-              <a
-                href="#services"
-                className="block hover:text-spark transition-colors"
-              >
-                Custom Cutting Tools
-              </a>
-            </div>
+            <div className="space-y-3 text-sm text-white/60">{services.map((service) => <Link key={service.slug} href={`/services/${service.slug}`} className="block hover:text-spark transition-colors">{service.name}</Link>)}</div>
           </div>
 
           {/* LOCATION */}
@@ -80,7 +49,8 @@ export default function Footer() {
             </p>
 
             <div className="space-y-3 text-sm text-white/60">
-              <p>Near PNB Bank, Aurangabad, Yamuna Nagar, Haryana 135001, India</p>
+              <p>{site.address}</p>
+              {tierOneLocations.map((location) => <Link key={location.slug} href={`/locations/${location.slug}`} className="block hover:text-spark">{location.city}</Link>)}
 
               <a
                 href="#contact"

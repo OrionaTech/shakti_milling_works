@@ -1,6 +1,9 @@
 import Link from "next/link";
 import GeoServiceBanner from "@/components/GeoServiceBanner";
 import HeroVideo from "@/components/HeroVideo";
+import PricingGuide from "@/components/PricingGuide";
+import TrackedLink from "@/components/TrackedLink";
+import { pricing } from "@/lib/site";
 
 export default function Hero() {
   return (
@@ -12,10 +15,10 @@ export default function Hero() {
           </p>
 
           <h1 className="font-black leading-[1.03] tracking-tight text-4xl sm:text-5xl md:text-6xl max-w-4xl">
-            Don&apos;t replace an expensive carbide end mill.
+            End Mill Regrinding in Yamunanagar.
             <br />
             <span className="hero-fade text-spark">
-              Regrind &amp; Resharpen from ₹70.
+              Regrind &amp; Resharpen.
             </span>
           </h1>
 
@@ -25,7 +28,7 @@ export default function Hero() {
           </p>
 
           <p className="mt-5 text-charcoal/60 max-w-lg leading-relaxed">
-            Most orders are ready within 24 hours of tool receipt. Final pricing depends on size, geometry and condition.
+            Yamunanagar is also commonly written as Yamuna Nagar. Final pricing depends on size, geometry and condition.
           </p>
 
           <p className="mt-4 text-charcoal/60 max-w-lg leading-relaxed">
@@ -33,20 +36,23 @@ export default function Hero() {
           </p>
           <div className="mt-4"><GeoServiceBanner /></div>
             <div className="mt-8">
-              <a
+              <TrackedLink
                 href="#contact"
+                eventName="courier_cta_click"
+                eventParameters={{ placement: "hero" }}
                 className="inline-flex bg-navy text-white font-bold px-7 py-4 rounded-md hover:bg-charcoal transition-colors"
               >
                 Get A Regrinding Quote →
-              </a>
+              </TrackedLink>
 
               <p className="text-xs text-charcoal/40 mt-3">
-                Send us photos of your tools on WhatsApp.
+                Send us photos of your tools on WhatsApp for assessment and a quote.
               </p>
 
               <p className="mt-3 text-sm font-semibold text-charcoal/70">
-                Starting at <span className="text-spark">₹70 per piece</span>
+                Starting at <span className="text-spark">{pricing.startingAt}</span>
               </p>
+              <PricingGuide />
             </div>
           </div>
         </div>
