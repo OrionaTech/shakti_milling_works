@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { pageMetadata } from "@/lib/metadata";
 import { site } from "@/lib/site";
+import { breadcrumbJsonLd, JsonLd } from "@/lib/jsonld";
 
 const pageUrl = `${site.url}/videos/precision-regrinding`;
 const videoUrl = `${site.url}/videos/precision-regrinding.mp4`;
@@ -16,8 +17,7 @@ const videoObject = {
   "@context": "https://schema.org",
   "@type": "VideoObject",
   name: "Precision Carbide End Mill Regrinding",
-  description:
-    "Watch tungsten carbide end mills being precision reground to restore their cutting edges and geometry.",
+  description: "Watch the regrinding process used to restore suitable tungsten carbide end mills, cutting edges and tool geometry.",
   thumbnailUrl: [thumbnailUrl],
   uploadDate: "2026-08-11",
   contentUrl: videoUrl,
@@ -32,6 +32,11 @@ const videoObject = {
 export default function PrecisionRegrindingVideoPage() {
   return (
     <main className="mx-auto max-w-5xl px-5 py-10 md:py-16">
+      <JsonLd data={videoObject} />
+      <JsonLd data={breadcrumbJsonLd([
+        { label: "Home", href: "/" },
+        { label: "Precision Carbide End Mill Regrinding", href: "/videos/precision-regrinding" },
+      ])} />
       <Link href="/" className="text-sm text-navy underline underline-offset-4">
         Shakti Milling Works
       </Link>
@@ -54,12 +59,6 @@ export default function PrecisionRegrindingVideoPage() {
           Your browser does not support embedded video.
         </video>
       </div>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(videoObject).replace(/</g, "\\u003c"),
-        }}
-      />
     </main>
   );
 }

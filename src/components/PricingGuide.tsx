@@ -1,4 +1,4 @@
-import { pricing } from "@/lib/site";
+import { formatPricePerPiece, pricing } from "@/lib/site";
 
 export default function PricingGuide() {
   return (
@@ -7,7 +7,7 @@ export default function PricingGuide() {
       <div className="grid grid-cols-3 divide-x divide-steelgray">
         <p className="p-3 font-medium">Diameter</p><p className="p-3 font-medium">Flutes</p><p className="p-3 font-medium">Price</p>
       </div>
-      {pricing.ranges.map((range, index) => <div key={index} className="grid grid-cols-3 divide-x divide-steelgray border-t border-steelgray"><p className="p-3">{range.diameter}</p><p className="p-3">{range.fluteCount}</p><p className="p-3">{range.price}</p></div>)}
+      {pricing.ranges.map((range) => <div key={range.label} className="grid grid-cols-3 divide-x divide-steelgray border-t border-steelgray"><p className="p-3">{range.label}</p><p className="p-3">{range.fluteCount}</p><p className="p-3">{formatPricePerPiece(range.priceInr)}</p></div>)}
     </div>
   );
 }

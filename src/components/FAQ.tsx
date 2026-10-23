@@ -44,7 +44,7 @@ const faqs = [
   {
     question: "What is your turnaround time?",
     answer:
-      "Local orders typically take 24 hours. Courier orders are typically ready 24 hours after the courier is accepted, subject to tool assessment.",
+      "Local orders typically take 24–48 hours. Courier orders are typically ready 24 hours after the courier is accepted, subject to tool assessment.",
   },
   {
     question: "What diameter range do you regrind?",

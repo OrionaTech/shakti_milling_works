@@ -21,7 +21,7 @@ const steps = [
     number: "04",
     title: "Regrinding",
     description:
-      "Local orders typically take 24 hours. Courier orders are typically ready 24 hours after the courier is accepted, subject to assessment.",
+      "Local orders typically take 24–48 hours. Courier orders are typically ready 24 hours after the courier is accepted, subject to assessment.",
   },
 ];
 

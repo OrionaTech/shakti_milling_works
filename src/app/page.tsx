@@ -10,7 +10,7 @@ import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import StructuredData from "@/components/StructuredData";
+import { JsonLd, homeGraph } from "@/lib/jsonld";
 import TrustStrip from "@/components/TrustStrip";
 import ServiceCoverage from "@/components/ServiceCoverage";
 import FlyerDownload from "@/components/FlyerDownload";
@@ -28,7 +28,7 @@ export function generateMetadata(): Metadata {
 export default function Home() {
   return (
     <>
-      <StructuredData />
+      <JsonLd data={homeGraph()} />
 
       <Header />
 

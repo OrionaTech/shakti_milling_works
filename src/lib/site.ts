@@ -5,6 +5,8 @@ export const site = {
   ownerName: "Balram",
   gstin: "06GLRPK9430C1ZV",
   locale: "en_IN",
+  logoUrl: "https://shaktimillingworks.in/images/logo.png",
+  imageUrl: "https://shaktimillingworks.in/images/video-poster.jpg",
   contact: {
     primaryPhoneE164: "+918572068977",
     primaryPhoneDisplay: "+91 85720 68977",
@@ -31,7 +33,19 @@ export const site = {
     ],
   },
   address: "Near PNB Bank, Aurangabad, Distt. Yamuna Nagar, Haryana 135002, India",
+  addressParts: {
+    streetAddress: "Near PNB Bank, Aurangabad",
+    addressLocality: "Yamunanagar",
+    addressRegion: "Haryana",
+    postalCode: "135002",
+    addressCountry: "IN",
+  },
   geo: { latitude: 30.1036325, longitude: 77.2309723 },
+  openingHours: {
+    days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    opens: "09:00",
+    closes: "18:00",
+  },
   mapsDirectionsUrl: "https://www.google.com/maps/dir//SHAKTI+MILLING+WORKS,+Aurangabad,+Yamuna+Nagar,+Haryana+135002/@30.0969664,77.2290188,3014m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0x390ef942dbc03141:0xc9e820f8a58b7917!2m2!1d77.2309723!2d30.1036325?entry=ttu&g_ep=EgoyMDI2MTAxOS4wIKXMDSoASAFQAw%3D%3D",
   feedbackUrl: "https://tally.so/r/o9bK7b",
   feedbackFormId: "o9bK7b",
@@ -41,11 +55,13 @@ export const site = {
 export const pricing = {
   startingAt: "₹50 per piece",
   ranges: [
-    { diameter: "4–8 mm", fluteCount: "2–6 flutes", price: "₹50 per piece" },
-    { diameter: "8–12 mm", fluteCount: "2–6 flutes", price: "₹80 per piece" },
-    { diameter: "14–20 mm", fluteCount: "2–6 flutes", price: "₹120 per piece" },
+    { minDiameterMm: 4, maxDiameterMm: 8, priceInr: 50, fluteCount: "2–6 flutes", label: "4–8 mm" },
+    { minDiameterMm: 9, maxDiameterMm: 12, priceInr: 80, fluteCount: "2–6 flutes", label: "9–12 mm" },
+    { minDiameterMm: 14, maxDiameterMm: 20, priceInr: 120, fluteCount: "2–6 flutes", label: "14–20 mm" },
   ],
 } as const;
+
+export const formatPricePerPiece = (priceInr: number) => `₹${priceInr} per piece`;
 
 export type TierOneLocation = {
   slug: string;
@@ -57,7 +73,43 @@ export type TierOneLocation = {
 };
 
 export const tierOneLocations: TierOneLocation[] = [
-  { slug: "mohali-chandigarh", city: "Mohali–Chandigarh", title: "Carbide Tool Regrinding for Mohali & Chandigarh", description: "Pickup and courier support for Mohali and Chandigarh carbide tool regrinding orders.", intro: "Shakti Milling Works provides pickup and courier support for Mohali and Chandigarh orders. This page does not represent a shop or premises in Mohali or Chandigarh.", localNote: "Pickup and courier support are available; the only premises are in Yamunanagar." },
+  {
+    slug: "panchkula",
+    city: "Panchkula",
+    title: "Carbide Tool Regrinding for Panchkula",
+    description: "Pickup and courier support for Panchkula carbide tool regrinding orders.",
+    intro: "Shakti Milling Works provides pickup and courier support for Panchkula carbide-tool regrinding orders from its Yamunanagar premises.",
+    localNote: "Pickup and delivery service is available for Panchkula orders, with a typical 24–48 hour turnaround.",
+  },
+  {
+    slug: "dera-bassi",
+    city: "Dera Bassi",
+    title: "Carbide Tool Regrinding for Dera Bassi",
+    description: "Courier-based carbide tool regrinding support for Dera Bassi orders.",
+    intro: "Dera Bassi customers can share tool photographs, quantities and dimensions with Shakti Milling Works before arranging a courier-based regrinding order.",
+    localNote: "Pickup and delivery service is available, with a typical 24–48 hour turnaround.",
+  },
+  {
+    slug: "kurukshetra",
+    city: "Kurukshetra",
+    title: "Carbide Tool Regrinding for Kurukshetra",
+    description: "Courier-based carbide tool regrinding support for Kurukshetra orders.",
+    intro: "Kurukshetra customers can share tool photographs, quantities and dimensions with Shakti Milling Works before arranging a courier-based regrinding order.",
+    localNote: "Pickup and delivery service is available, with a typical 24–48 hour turnaround.",
+  },
+  {
+    slug: "saharanpur",
+    city: "Saharanpur",
+    title: "Carbide Tool Regrinding for Saharanpur",
+    description: "Courier-based carbide tool regrinding support for Saharanpur orders.",
+    intro: "Saharanpur customers can share tool photographs, quantities and dimensions with Shakti Milling Works before arranging a courier-based regrinding order.",
+    localNote: "Pickup and delivery service is available, with a typical 24–48 hour turnaround.",
+  },
+  { slug: "mohali-chandigarh", city: "Mohali–Chandigarh", 
+    title: "Carbide Tool Regrinding for Mohali & Chandigarh", 
+    description: "Pickup and courier support for Mohali and Chandigarh carbide tool regrinding orders.", 
+    intro: "Shakti Milling Works provides pickup and courier support for Mohali and Chandigarh orders. This page does not represent a shop or premises in Mohali or Chandigarh.", 
+    localNote: "Pickup and delivery service is available, with a typical 24–48 hour turnaround." },
   {
     slug: "yamunanagar",
     city: "Yamunanagar",
@@ -93,8 +145,8 @@ export const tierOneLocations: TierOneLocation[] = [
 ];
 
 /** Add a city here only once its page has verified, publishable local detail. */
-/** Index the four confirmed service locations; Mohali–Chandigarh remains pickup/courier only. */
-export const indexedLocationSlugs = ["yamunanagar", "jagadhri", "ambala", "karnal"];
+/** All configured service areas are available for indexing. */
+export const indexedLocationSlugs = tierOneLocations.map(({ slug }) => slug);
 
 export const getTierOneLocation = (slug: string) =>
   tierOneLocations.find((location) => location.slug === slug);
