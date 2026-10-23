@@ -210,7 +210,7 @@ export const tierOneLocations: TierOneLocation[] = [
 
 /** Add a city here only once its page has verified, publishable local detail. */
 /** Keep only locations with confirmed unique content indexable. */
-export const indexedLocationSlugs = ["yamunanagar", "jagadhri"];
+export const indexedLocationSlugs = ["yamunanagar", "jagadhri", "ambala", "saharanpur", "kurukshetra", "karnal", "panchkula", "dera-bassi", "mohali-chandigarh"];
 
 export const getTierOneLocation = (slug: string) =>
   tierOneLocations.find((location) => location.slug === slug);
