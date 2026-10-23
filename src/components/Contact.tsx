@@ -1,6 +1,7 @@
 import PricingGuide from "@/components/PricingGuide";
 import TrackedLink from "@/components/TrackedLink";
 import { site } from "@/lib/site";
+import FeedbackPopupButton from "@/components/FeedbackPopupButton";
 
 const whatsappMessage = encodeURIComponent(
   `Hi Shakti Milling Works,
@@ -113,6 +114,7 @@ export default function Contact() {
               </h3>
 
               <p id="contact-details" className="text-white/60 mt-3 leading-relaxed">{site.address}</p>
+              <p className="mt-2 text-sm text-white/60">GSTIN: {site.gstin}</p>
 
               <div className="mt-6 grid sm:grid-cols-2 gap-5">
                 <div>
@@ -121,11 +123,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-widest text-white/30">Call</p>
-                  {site.contact.primaryPhoneE164 ? (
-                    <TrackedLink href={`tel:${site.contact.primaryPhoneE164}`} eventName="tel_click" eventParameters={{ placement: "contact_card" }} className="mt-1 inline-block font-semibold text-white hover:text-spark transition-colors">
-                      {site.contact.primaryPhoneDisplay}
-                    </TrackedLink>
-                  ) : <p className="mt-1 font-semibold text-white">TODO: confirm phone number</p>}
+                  <TrackedLink href={`tel:${site.contact.primaryPhoneE164}`} eventName="tel_click" eventParameters={{ placement: "contact_card" }} className="mt-1 inline-block font-semibold text-white hover:text-spark transition-colors">{site.contact.primaryPhoneDisplay}</TrackedLink>
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-widest text-white/30">Opening hours</p>
@@ -149,16 +147,19 @@ export default function Contact() {
             </p>
           </div>
 
-          <TrackedLink
-            href={whatsappLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            eventName="whatsapp_click"
-            eventParameters={{ placement: "contact_bottom_cta" }}
-            className="inline-flex items-center justify-center bg-spark text-charcoal font-bold px-6 py-3 rounded-md hover:bg-white transition-colors whitespace-nowrap"
-          >
-            Get A Quote on WhatsApp →
-          </TrackedLink>
+          <div className="flex flex-wrap gap-3">
+            <TrackedLink
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              eventName="whatsapp_click"
+              eventParameters={{ placement: "contact_bottom_cta" }}
+              className="inline-flex items-center justify-center bg-spark text-charcoal font-bold px-6 py-3 rounded-md hover:bg-white transition-colors whitespace-nowrap"
+            >
+              Get A Quote on WhatsApp →
+            </TrackedLink>
+            <FeedbackPopupButton />
+          </div>
         </div>
       </div>
     </section>

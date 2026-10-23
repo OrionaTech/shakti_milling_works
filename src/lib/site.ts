@@ -2,6 +2,8 @@ export const site = {
   url: "https://shaktimillingworks.in",
   host: "shaktimillingworks.in",
   name: "Shakti Milling Works",
+  ownerName: "Balram",
+  gstin: "06GLRPK9430C1ZV",
   locale: "en_IN",
   contact: {
     primaryPhoneE164: "+918572068977",
@@ -12,6 +14,21 @@ export const site = {
     hours: "Monday–Saturday, 9:00 AM–6:00 PM",
     emailSender: "contact@shaktimillingworks.in",
     quoteInbox: "contact@shaktimillingworks.in",
+  },
+  bulkAccounts: {
+    minimumQuantity: "20 tools (single-tool orders are also welcome)",
+    localCollectionSchedule: "Daily for Yamunanagar, Jagadhri, Ambala and Karnal",
+    weeklyCollectionSchedule: "Weekly for Mohali, Chandigarh and Panchkula",
+  },
+  googleRating: { value: 5, reviewCount: 5 },
+  localServiceExamples: {
+    yamunanagar: [
+      "Bhagmal and Sons, Yamunanagar",
+      "Guru Amar Industries, E-34 Industrial Area, Yamuna Nagar",
+      "Yamuna Nagar Engineering Cluster Pvt Ltd",
+      "Shree Ram Industries, Radaur, Yamuna Nagar",
+      "Other local shops and industries in the Yamunanagar area",
+    ],
   },
   address: "Near PNB Bank, Aurangabad, Distt. Yamuna Nagar, Haryana 135002, India",
   geo: { latitude: 30.1036325, longitude: 77.2309723 },
@@ -76,7 +93,8 @@ export const tierOneLocations: TierOneLocation[] = [
 ];
 
 /** Add a city here only once its page has verified, publishable local detail. */
-export const indexedLocationSlugs = tierOneLocations.map(({ slug }) => slug);
+/** Index the four confirmed service locations; Mohali–Chandigarh remains pickup/courier only. */
+export const indexedLocationSlugs = ["yamunanagar", "jagadhri", "ambala", "karnal"];
 
 export const getTierOneLocation = (slug: string) =>
   tierOneLocations.find((location) => location.slug === slug);

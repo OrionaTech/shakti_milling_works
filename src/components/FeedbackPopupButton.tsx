@@ -20,5 +20,5 @@ export default function FeedbackPopupButton() {
     window.open(site.feedbackUrl, "_blank", "noopener,noreferrer");
   };
 
-  return <><Script src="https://tally.so/widgets/embed.js" strategy="afterInteractive" /><button type="button" onClick={openFeedback} className="mt-5 inline-block rounded-md bg-navy px-5 py-3 font-bold text-white hover:bg-charcoal">Share feedback</button></>;
+  return <><Script src="https://tally.so/widgets/embed.js" strategy="afterInteractive" /><button type="button" onClick={openFeedback} className="inline-flex items-center justify-center rounded-md bg-navy px-5 py-3 font-bold text-white hover:bg-charcoal">Share feedback</button></>;
 }

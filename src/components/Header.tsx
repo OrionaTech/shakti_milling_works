@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Download } from "lucide-react";
 import TrackedLink from "@/components/TrackedLink";
+import { site } from "@/lib/site";
 
 const FLYER_URL = "/downloads/shakti-milling-works.pdf";
 
@@ -61,6 +62,7 @@ export default function Header() {
 
           {/* RIGHT SIDE: mobile flyer icon + CTA */}
           <div className="flex items-center gap-2">
+            <a href={`tel:${site.contact.primaryPhoneE164}`} className="hidden md:block text-xs font-bold text-navy">{site.contact.primaryPhoneDisplay}</a>
             <a
               href={FLYER_URL}
               download

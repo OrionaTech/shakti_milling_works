@@ -12,12 +12,14 @@ export default function LocationSchema({ areaServed, serviceName }: LocationSche
     "@id": `${site.url}/#business`,
     name: site.name,
     url: site.url,
+    taxID: site.gstin,
     priceRange: pricing.startingAt,
     telephone: site.contact.primaryPhoneE164,
     openingHours: "Mo-Sa 09:00-18:00",
     sameAs: site.socialLinks,
     address: { "@type": "PostalAddress", streetAddress: "Near PNB Bank, Aurangabad", addressLocality: "Yamuna Nagar", addressRegion: "Haryana", postalCode: "135002", addressCountry: "IN" },
     geo: { "@type": "GeoCoordinates", latitude: site.geo.latitude, longitude: site.geo.longitude },
+    aggregateRating: { "@type": "AggregateRating", ratingValue: site.googleRating.value, reviewCount: site.googleRating.reviewCount },
     areaServed,
     ...(serviceName
       ? {

@@ -14,7 +14,6 @@ import StructuredData from "@/components/StructuredData";
 import TrustStrip from "@/components/TrustStrip";
 import ServiceCoverage from "@/components/ServiceCoverage";
 import FlyerDownload from "@/components/FlyerDownload";
-import Testimonials from "@/components/Testimonials";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/metadata";
 
@@ -53,7 +52,6 @@ export default function Home() {
         <FlyerDownload />
 
         <FAQ />
-        <Testimonials />
 
         <Contact />
       </main>

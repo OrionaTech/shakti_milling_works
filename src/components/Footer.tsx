@@ -50,6 +50,11 @@ export default function Footer() {
 
             <div className="space-y-3 text-sm text-white/60">
               <p>{site.address}</p>
+              <p>GSTIN: {site.gstin}</p>
+              <a href={`tel:${site.contact.primaryPhoneE164}`} className="block hover:text-spark">{site.contact.primaryPhoneDisplay}</a>
+              <a href={`tel:${site.contact.secondaryPhoneE164}`} className="block hover:text-spark">{site.contact.secondaryPhoneDisplay}</a>
+              <p>{site.contact.hours}</p>
+              <a href="/contact.vcf" download className="block hover:text-spark">Save contact card</a>
               {tierOneLocations.map((location) => <Link key={location.slug} href={`/locations/${location.slug}`} className="block hover:text-spark">{location.city}</Link>)}
 
               <a

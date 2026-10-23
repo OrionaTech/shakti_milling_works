@@ -5,6 +5,7 @@ const trustPoints = [
   { label: "Service", value: "Carbide tool regrinding" },
   { label: "Courier support", value: "Pan-India" },
   { label: "Public pricing", value: pricing.startingAt },
+  { label: "Google Maps", value: "5.0 ★ · 5 reviews" },
 ];
 
 export default function TrustStrip() {

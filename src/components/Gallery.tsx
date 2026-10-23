@@ -257,14 +257,13 @@ export default function Gallery() {
         </div>
 
         {/* VIDEO */}
+        <div className="grid gap-5 md:grid-cols-2">
         <div className="relative overflow-hidden rounded-xl bg-charcoal shadow-xl">
           <video
             className="w-full aspect-video object-cover"
-            autoPlay
-            muted
-            loop
+            controls
             playsInline
-            preload="metadata"
+            preload="none"
             poster="/images/after/end-mill-after-1.jpeg"
           >
             <source
@@ -274,6 +273,8 @@ export default function Gallery() {
 
             Your browser does not support the video tag.
           </video>
+        </div>
+        <div className="relative overflow-hidden rounded-xl bg-charcoal shadow-xl"><video className="w-full aspect-video object-cover" controls playsInline preload="none" poster="/images/after/end-mill-after-1.jpeg"><source src="/videos/VID_20260824_152734422.mp4" type="video/mp4" />Your browser does not support the video tag.</video></div>
         </div>
 
         {/* VIDEO INFO */}
