@@ -10,7 +10,7 @@ const thumbnailUrl = `${site.url}/images/after/end-mill-after-1.jpeg`;
 
 export function generateMetadata(): Metadata {
   const description = "Watch the carbide end mill regrinding process from Shakti Milling Works.";
-  return { ...pageMetadata({ title: "Precision Carbide End Mill Regrinding Video", description, path: "/videos/precision-regrinding", type: "video.other" }), openGraph: { type: "video.other", url: pageUrl, title: "Precision Carbide End Mill Regrinding Video", description, videos: [{ url: videoUrl, type: "video/mp4" }], images: [thumbnailUrl] } };
+  return { ...pageMetadata({ title: "Precision Carbide End Mill Regrinding Video", description, path: "/videos/precision-regrinding", type: "video.other" }), openGraph: { type: "video.other", url: pageUrl, title: "Precision Carbide End Mill Regrinding Video", description, videos: [{ url: videoUrl, type: "video/mp4" }] } };
 }
 
 const videoObject = {

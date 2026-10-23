@@ -20,8 +20,9 @@ export default function Footer() {
               <Image
                 src="/images/logo.png"
                 alt="Shakti Milling Works"
-                width={2000}
-                height={2000}
+                width={500}
+                height={500}
+                sizes="230px"
                 className="absolute w-[230px] h-[230px] max-w-none left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
               />
             </Link>
@@ -53,6 +54,7 @@ export default function Footer() {
               <p>GSTIN: {site.gstin}</p>
               <a href={`tel:${site.contact.primaryPhoneE164}`} className="block hover:text-spark">{site.contact.primaryPhoneDisplay}</a>
               <a href={`tel:${site.contact.secondaryPhoneE164}`} className="block hover:text-spark">{site.contact.secondaryPhoneDisplay}</a>
+              <a href={`mailto:${site.contact.emailSender}`} className="block hover:text-spark">{site.contact.emailSender}</a>
               <p>{site.contact.hours}</p>
               <a href="/contact.vcf" download className="block hover:text-spark">Save contact card</a>
               {tierOneLocations.map((location) => <Link key={location.slug} href={`/locations/${location.slug}`} className="block hover:text-spark">{location.city}</Link>)}

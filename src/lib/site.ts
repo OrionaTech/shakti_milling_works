@@ -47,14 +47,14 @@ export const site = {
     opens: "09:00",
     closes: "18:00",
   },
-  mapsDirectionsUrl: "https://maps.app.goo.gl/xJxmB2SE3GFvf6rq6",
+  mapsDirectionsUrl: "https://share.google/m1UGKogJ6bBEmteyJ",
   feedbackUrl: "https://tally.so/r/o9bK7b",
   feedbackFormId: "o9bK7b",
   socialLinks: ["https://youtube.com/@shaktimillingworks", "https://www.instagram.com/shaktimillingworks"],
 } as const;
 
 export const pricing = {
-  startingAt: "₹50 per piece",
+  startingAt: "from ₹50 per piece",
   ranges: [
     { minDiameterMm: 4, maxDiameterMm: 8, priceInr: 50, fluteCount: "2–6 flutes", label: "4–8 mm" },
     { minDiameterMm: 8, maxDiameterMm: 12, priceInr: 80, fluteCount: "2–6 flutes", label: "over 8 up to 12 mm" },
@@ -64,6 +64,16 @@ export const pricing = {
 
 export const formatPricePerPiece = (priceInr: number) => `₹${priceInr} per piece`;
 
+export type SampleOrder = {
+  summary: string;
+  qty?: number;
+  tool?: string;
+  issue?: string;
+  outcome?: string;
+  turnaround?: string;
+  permission: boolean;
+};
+
 export type TierOneLocation = {
   slug: string;
   city: string;
@@ -71,83 +81,136 @@ export type TierOneLocation = {
   description: string;
   intro: string;
   localNote: string;
+  distanceKm?: number;
+  serviceMode: "local" | "pickup" | "courier";
+  route?: string;
+  transit?: string;
+  sampleOrder?: SampleOrder;
 };
 
 export const tierOneLocations: TierOneLocation[] = [
   {
-    slug: "panchkula",
-    city: "Panchkula",
-    title: "Carbide Tool Regrinding for Panchkula",
-    description: "Pickup and courier support for Panchkula carbide tool regrinding orders.",
-    intro: "Shakti Milling Works provides pickup and courier support for Panchkula carbide-tool regrinding orders from its Yamunanagar premises.",
-    localNote: "Pickup and delivery service is available for Panchkula orders, with a typical 24–48 hour turnaround.",
-  },
-  {
-    slug: "dera-bassi",
-    city: "Dera Bassi",
-    title: "Carbide Tool Regrinding for Dera Bassi",
-    description: "Courier-based carbide tool regrinding support for Dera Bassi orders.",
-    intro: "Dera Bassi customers can share tool photographs, quantities and dimensions with Shakti Milling Works before arranging a courier-based regrinding order.",
-    localNote: "Pickup and delivery service is available, with a typical 24–48 hour turnaround.",
-  },
-  {
-    slug: "kurukshetra",
-    city: "Kurukshetra",
-    title: "Carbide Tool Regrinding for Kurukshetra",
-    description: "Courier-based carbide tool regrinding support for Kurukshetra orders.",
-    intro: "Kurukshetra customers can share tool photographs, quantities and dimensions with Shakti Milling Works before arranging a courier-based regrinding order.",
-    localNote: "Pickup and delivery service is available, with a typical 24–48 hour turnaround.",
-  },
-  {
-    slug: "saharanpur",
-    city: "Saharanpur",
-    title: "Carbide Tool Regrinding for Saharanpur",
-    description: "Courier-based carbide tool regrinding support for Saharanpur orders.",
-    intro: "Saharanpur customers can share tool photographs, quantities and dimensions with Shakti Milling Works before arranging a courier-based regrinding order.",
-    localNote: "Pickup and delivery service is available, with a typical 24–48 hour turnaround.",
-  },
-  { slug: "mohali-chandigarh", city: "Mohali–Chandigarh", 
-    title: "Carbide Tool Regrinding for Mohali & Chandigarh", 
-    description: "Pickup and courier support for Mohali and Chandigarh carbide tool regrinding orders.", 
-    intro: "Shakti Milling Works provides pickup and courier support for Mohali and Chandigarh orders. This page does not represent a shop or premises in Mohali or Chandigarh.", 
-    localNote: "Pickup and delivery service is available, with a typical 24–48 hour turnaround." },
-  {
     slug: "yamunanagar",
     city: "Yamunanagar",
     title: "Carbide End Mill Regrinding in Yamunanagar",
-    description: "End mill, drill and ball nose regrinding from Shakti Milling Works in Yamunanagar, Haryana.",
-    intro: "Shakti Milling Works serves Yamunanagar from its local premises. Share tool photos and requirements to discuss whether regrinding is suitable.",
-    localNote: "Local pickup and return are available in Yamunanagar.",
-  },
-  {
-    slug: "ambala",
-    city: "Ambala",
-    title: "Carbide End Mill Regrinding for Ambala",
-    description: "Courier-based carbide end mill, drill and ball nose regrinding for Ambala customers from Shakti Milling Works.",
-    intro: "Ambala machining teams can share photos and tool details with Shakti Milling Works before arranging a courier-based regrinding order.",
-    localNote: "Local pickup and return are available in Ambala.",
+    description: "End mill, drill and ball nose regrinding at Shakti Milling Works' own workshop in Yamunanagar, Haryana, with in-house pickup and delivery.",
+    intro: "Our grinding workshop is in Yamunanagar. Walk in with your tools, or our own team member collects them from your unit and brings them back reground.",
+    localNote: "Our own person collects and delivers per order. For urgent jobs, we send someone immediately.",
+    distanceKm: 0,
+    serviceMode: "local",
+    route: "Your unit to our workshop and back, handled by our own person.",
+    transit: "Pickup is arranged per order, and immediately for urgent requirements.",
+    sampleOrder: {
+      summary: "Regrinding work from Yamunanagar units comes to our workshop daily, with our own person handling pickup and delivery.",
+      permission: true,
+    },
   },
   {
     slug: "jagadhri",
     city: "Jagadhri",
     title: "Carbide End Mill Regrinding for Jagadhri",
-    description: "Carbide end mill, drill and ball nose regrinding for Jagadhri customers from Shakti Milling Works in Yamunanagar.",
-    intro: "Jagadhri workshops can share tool photos and requirements with Shakti Milling Works to discuss a suitable regrinding order.",
-    localNote: "Local pickup and return are available in Jagadhri.",
+    description: "Carbide end mill, drill and ball nose regrinding for Jagadhri workshops, with pickup and delivery by our own team from Yamunanagar.",
+    intro: "Jagadhri is next door to our Yamunanagar workshop. Our own team member picks up worn tools and delivers them back after regrinding.",
+    localNote: "Pickup per order, and immediate pickup when you need tools back fast.",
+    distanceKm: 3,
+    serviceMode: "pickup",
+    route: "Jagadhri to our Yamunanagar workshop and back, by our own person.",
+    transit: "Short run, so urgent tools can be collected immediately.",
+    sampleOrder: {
+      summary: "Recent order: a Jagadhri workshop sent 20 carbide tools for regrinding, picked up and delivered back by our own person.",
+      qty: 20,
+      permission: false,
+    },
+  },
+  {
+    slug: "ambala",
+    city: "Ambala",
+    title: "Carbide End Mill Regrinding for Ambala",
+    description: "Carbide end mill, drill and ball nose regrinding for Ambala customers, with in-house pickup and delivery from Shakti Milling Works.",
+    intro: "Ambala machining teams can share photos and tool details first. Our own team member then collects the tools and delivers them back reground.",
+    localNote: "Pickup is arranged per order. Tell us it's urgent and we go immediately.",
+    distanceKm: 50,
+    serviceMode: "pickup",
+    route: "Ambala to Yamunanagar and back, by our own person.",
+    transit: "Pickup per order, with immediate dispatch for urgent jobs.",
+  },
+  {
+    slug: "saharanpur",
+    city: "Saharanpur",
+    title: "Carbide Tool Regrinding for Saharanpur",
+    description: "Carbide tool regrinding for Saharanpur customers, with pickup and delivery arranged by Shakti Milling Works.",
+    intro: "Saharanpur is just across the UP–Haryana border. Share tool photos, quantities and dimensions, and we arrange pickup and return.",
+    localNote: "Pickup is arranged per order, and immediately if the requirement is urgent.",
+    distanceKm: 60,
+    serviceMode: "pickup",
+    route: "Saharanpur to Yamunanagar and back, by our own person.",
+    transit: "Pickup per order, with immediate dispatch for urgent jobs.",
+  },
+  {
+    slug: "kurukshetra",
+    city: "Kurukshetra",
+    title: "Carbide Tool Regrinding for Kurukshetra",
+    description: "Carbide tool regrinding for Kurukshetra customers, with pickup and delivery arranged by Shakti Milling Works.",
+    intro: "Kurukshetra customers share tool photos, quantities and dimensions first. We then arrange pickup and return to our Yamunanagar workshop.",
+    localNote: "Pickup is arranged per order, and immediately for urgent tools.",
+    distanceKm: 70,
+    serviceMode: "pickup",
+    route: "Kurukshetra to Yamunanagar and back, by our own person.",
+    transit: "Pickup per order, with immediate dispatch for urgent jobs.",
   },
   {
     slug: "karnal",
     city: "Karnal",
     title: "Carbide End Mill Regrinding for Karnal",
-    description: "Courier-based carbide end mill, drill and ball nose regrinding for Karnal customers from Shakti Milling Works.",
-    intro: "Karnal manufacturers can share photos of worn carbide cutters before arranging a courier-based assessment and regrinding order.",
-    localNote: "Local pickup and return are available in Karnal.",
+    description: "Carbide end mill, drill and ball nose regrinding for Karnal customers, with pickup and delivery from Shakti Milling Works.",
+    intro: "Karnal manufacturers send photos of worn carbide cutters first. We assess them, then arrange pickup and return to our Yamunanagar workshop.",
+    localNote: "Pickup is arranged per order, and immediately if you need it urgently.",
+    distanceKm: 100,
+    serviceMode: "pickup",
+    route: "Karnal to Yamunanagar and back, by our own person.",
+    transit: "Pickup per order, with immediate dispatch for urgent jobs.",
+  },
+  {
+    slug: "panchkula",
+    city: "Panchkula",
+    title: "Carbide Tool Regrinding for Panchkula",
+    description: "Carbide tool regrinding for Panchkula customers, with pickup and delivery from our Yamunanagar workshop.",
+    intro: "Panchkula orders travel to our Yamunanagar workshop with pickup and return arranged by Shakti Milling Works.",
+    localNote: "Pickup is arranged per order, and immediately for urgent requirements.",
+    distanceKm: 90,
+    serviceMode: "pickup",
+    route: "Panchkula to Yamunanagar and back, by our own person.",
+    transit: "Pickup per order, with immediate dispatch for urgent jobs.",
+  },
+  {
+    slug: "dera-bassi",
+    city: "Dera Bassi",
+    title: "Carbide Tool Regrinding for Dera Bassi",
+    description: "Carbide tool regrinding for Dera Bassi industrial customers, with pickup and delivery from Shakti Milling Works.",
+    intro: "Dera Bassi customers share tool photos, quantities and dimensions first. We then arrange pickup and return to Yamunanagar.",
+    localNote: "Pickup is arranged per order, and immediately for urgent tools.",
+    distanceKm: 100,
+    serviceMode: "pickup",
+    route: "Dera Bassi to Yamunanagar and back, by our own person.",
+    transit: "Pickup per order, with immediate dispatch for urgent jobs.",
+  },
+  {
+    slug: "mohali-chandigarh",
+    city: "Mohali–Chandigarh",
+    title: "Carbide Tool Regrinding for Mohali & Chandigarh",
+    description: "Carbide tool regrinding for Mohali and Chandigarh customers, with pickup and delivery from our Yamunanagar workshop.",
+    intro: "Shakti Milling Works serves Mohali and Chandigarh from Yamunanagar, with pickup and return arranged. We have no shop or premises in either city.",
+    localNote: "Pickup is arranged per order, and immediately for urgent requirements.",
+    distanceKm: 100,
+    serviceMode: "pickup",
+    route: "Mohali and Chandigarh to Yamunanagar and back, by our own person.",
+    transit: "Pickup per order, with immediate dispatch for urgent jobs.",
   },
 ];
 
 /** Add a city here only once its page has verified, publishable local detail. */
-/** All configured service areas are available for indexing. */
-export const indexedLocationSlugs = tierOneLocations.map(({ slug }) => slug);
+/** Keep only locations with confirmed unique content indexable. */
+export const indexedLocationSlugs = ["yamunanagar", "jagadhri"];
 
 export const getTierOneLocation = (slug: string) =>
   tierOneLocations.find((location) => location.slug === slug);

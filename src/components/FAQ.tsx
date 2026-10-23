@@ -54,7 +54,7 @@ const faqs = [
   {
     question: "How much does end mill regrinding cost?",
     answer:
-      `Public pricing: ${pricing.startingAt}. Final pricing depends on tool size, geometry, condition and the required work.`,
+      `Public pricing: ${pricing.startingAt}. Final pricing depends on tool size, condition and required work.`,
   },
 ];
 

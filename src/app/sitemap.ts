@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${site.url}/videos/precision-regrinding`,
       changeFrequency: "yearly",
       priority: 0.7,
+      lastModified: new Date(), // better: a real per-page date
       videos: [
         {
           title: "Precision Carbide End Mill Regrinding",
@@ -27,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${site.url}/locations/${slug}`,
       changeFrequency: "monthly" as const,
       priority: 0.8,
+      lastModified: new Date(),
     })),
   ];
 }

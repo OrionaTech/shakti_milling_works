@@ -10,7 +10,7 @@ type PageMetadata = {
 
 export function pageMetadata({ title, description, path, type = "website" }: PageMetadata): Metadata {
   const url = new URL(path, site.url).toString();
-  const image = new URL("/images/video-poster.jpg", site.url).toString();
+  const image = new URL("/images/open-graph-banner.png", site.url).toString();
 
   return {
     title: { absolute: title },
@@ -23,7 +23,7 @@ export function pageMetadata({ title, description, path, type = "website" }: Pag
       siteName: site.name,
       title,
       description,
-      images: [{ url: image, alt: `${site.name} carbide tool regrinding` }],
+      images: [{ url: image, width: 1200, height: 630, alt: `${site.name} carbide end mill regrinding` }],
     },
     twitter: {
       card: "summary_large_image",

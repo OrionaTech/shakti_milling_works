@@ -23,7 +23,7 @@ const benefits = [
     number: "04",
     title: "Priced to make sense",
     description:
-      `Public pricing: ${pricing.startingAt}. We don't promise that every worn tool can be restored; we assess the condition and discuss whether regrinding is practical.`,
+      `Public pricing: ${pricing.startingAt}. Final pricing depends on tool size, condition and required work. We don't promise that every worn tool can be restored; we assess the condition and discuss whether regrinding is practical.`,
   },
 ];
 

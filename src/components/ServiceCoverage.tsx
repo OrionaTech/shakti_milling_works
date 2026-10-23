@@ -6,9 +6,9 @@ export default function ServiceCoverage() {
     <section className="max-w-6xl mx-auto px-5 pb-16 md:pb-20" aria-labelledby="who-we-serve">
       <div className="border border-steelgray rounded-xl p-7 md:p-10 bg-white">
         <p className="text-xs font-bold uppercase tracking-widest text-spark mb-3">Who We Serve</p>
-        <h2 id="who-we-serve" className="font-black text-3xl tracking-tight">Local tool regrinding, plus pan-India courier service.</h2>
+        <h2 id="who-we-serve" className="font-black text-3xl tracking-tight">Local tool regrinding, plus pan-India pickup and delivery.</h2>
         <p className="mt-4 max-w-3xl text-charcoal/65 leading-relaxed">
-          We provide faster local pickup coordination for Yamunanagar, Ambala, Jagadhri and Karnal. Elsewhere in India, send tool photos on WhatsApp and we can arrange a courier-based quote.
+          We provide faster local pickup coordination for Yamunanagar, Ambala, Jagadhri and Karnal. Elsewhere in India, send tool photos on WhatsApp to discuss pickup and delivery arrangements.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           {tierOneLocations.map((location) => (

@@ -49,6 +49,7 @@ export default function HeroVideo() {
           muted
           playsInline
           preload="metadata"
+          poster="/images/after/endmill-2.1-new.jpg"
           onEnded={(event) => {
             const [currentVideo, ...remainingVideos] = playlist;
             if (remainingVideos.length === 0) {

@@ -14,13 +14,16 @@ import { JsonLd, homeGraph } from "@/lib/jsonld";
 import TrustStrip from "@/components/TrustStrip";
 import ServiceCoverage from "@/components/ServiceCoverage";
 import FlyerDownload from "@/components/FlyerDownload";
+import About from "@/components/About";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/metadata";
 import { site } from "@/lib/site";
 
+const HOME_TITLE = "End Mill Regrinding in Yamunanagar | Shakti Milling Works";
+
 export function generateMetadata(): Metadata {
   return pageMetadata({
-    title: "End Mill Regrinding in Yamunanagar | Shakti",
+    title: HOME_TITLE,
     description: site.homeDescription,
     path: "/",
   });
@@ -35,13 +38,13 @@ export default function Home() {
 
       <main>
         <Hero />
+         <Solution />
         <Gallery />
 
         <TrustStrip />
 
         <Problem />
 
-        <Solution />
 
         <WhyRegrind />
 
@@ -52,7 +55,9 @@ export default function Home() {
         <ServiceCoverage />
         <FlyerDownload />
 
-        <FAQ />
+        <About />
+
+        {/* <FAQ /> */}
 
         <Contact />
       </main>

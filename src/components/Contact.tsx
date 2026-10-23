@@ -129,6 +129,10 @@ export default function Contact() {
                   <p className="text-xs uppercase tracking-widest text-white/30">Opening hours</p>
                   <p className="mt-1 font-semibold text-white">{site.contact.hours}</p>
                 </div>
+                <div>
+                  <p className="text-xs uppercase tracking-widest text-white/30">Email</p>
+                  <a href={`mailto:${site.contact.emailSender}`} className="mt-1 inline-block font-semibold text-white hover:text-spark transition-colors">{site.contact.emailSender}</a>
+                </div>
 
               </div>
             </div>

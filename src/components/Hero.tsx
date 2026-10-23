@@ -28,7 +28,7 @@ export default function Hero() {
           </p>
 
           <p className="mt-5 text-charcoal/60 max-w-lg leading-relaxed">
-            Yamunanagar is also commonly written as Yamuna Nagar. Final pricing depends on size, geometry and condition.
+            Yamunanagar is also commonly written as Yamuna Nagar. Final pricing depends on tool size, condition and required work.
           </p>
 
           <p className="mt-4 text-charcoal/60 max-w-lg leading-relaxed">
@@ -50,7 +50,7 @@ export default function Hero() {
               </p>
 
               <p className="mt-3 text-sm font-semibold text-charcoal/70">
-                Starting at <span className="text-spark">{pricing.startingAt}</span>
+                Public pricing: <span className="text-spark">{pricing.startingAt}</span>
               </p>
               <PricingGuide />
             </div>
