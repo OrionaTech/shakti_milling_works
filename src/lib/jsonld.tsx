@@ -1,5 +1,5 @@
 import type { TierOneLocation } from "@/lib/site";
-import { pricing, site } from "@/lib/site";
+import { formatPricePerPiece, pricing, site } from "@/lib/site";
 
 const schemaUrl = "https://schema.org";
 const businessId = `${site.url}/#business`;
@@ -21,8 +21,16 @@ export function homeGraph() {
     "@type": "Offer",
     priceCurrency: "INR",
     price: String(range.priceInr),
-    description: `${range.label} diameter, ${range.fluteCount}, per piece`,
+    description: `${range.label}, ${range.fluteCount}, ${formatPricePerPiece(range.priceInr)}`,
+    priceSpecification: {
+      "@type": "UnitPriceSpecification",
+      priceCurrency: "INR",
+      price: String(range.priceInr),
+      unitText: "piece",
+    },
   }));
+  const minimumDiameter = pricing.ranges[0].minDiameterMm;
+  const maximumDiameter = pricing.ranges[pricing.ranges.length - 1].maxDiameterMm;
 
   return {
     "@context": schemaUrl,
@@ -34,7 +42,7 @@ export function homeGraph() {
         url: site.url,
         logo: { "@type": "ImageObject", url: site.logoUrl },
         image: site.imageUrl,
-        description: "End Mill Regrinding in Yamunanagar. Regrind & Resharpen.",
+        description: site.homeDescription,
         telephone: site.contact.primaryPhoneE164,
         email: site.contact.emailSender,
         priceRange: "₹50–₹120 per piece",
@@ -82,7 +90,7 @@ export function homeGraph() {
         "@type": "Service",
         "@id": regrindingId,
         name: "Carbide End Mill Regrinding",
-        description: "Suitable 4mm–20mm carbide end mills can often be reground instead of replaced.",
+        description: `Suitable ${minimumDiameter}mm–${maximumDiameter}mm carbide end mills can often be reground instead of replaced.`,
         url: site.url,
         provider: { "@id": businessId },
         areaServed: { "@type": "Country", name: "India" },

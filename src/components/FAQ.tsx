@@ -49,7 +49,7 @@ const faqs = [
   {
     question: "What diameter range do you regrind?",
     answer:
-      "We support suitable tungsten carbide end mills from 4 mm to 20 mm in diameter. Share clear tool photos and dimensions for assessment.",
+      `We support suitable tungsten carbide end mills from ${pricing.ranges[0].minDiameterMm} mm to ${pricing.ranges[pricing.ranges.length - 1].maxDiameterMm} mm in diameter. Share clear tool photos and dimensions for assessment.`,
   },
   {
     question: "How much does end mill regrinding cost?",

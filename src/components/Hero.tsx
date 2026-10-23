@@ -24,7 +24,7 @@ export default function Hero() {
 
           <div className="mt-8">
           <p className="text-lg md:text-xl text-charcoal/80 leading-relaxed max-w-xl">
-            Suitable 4mm–20mm carbide end mills can often be reground instead of replaced.
+            Suitable {pricing.ranges[0].minDiameterMm}mm–{pricing.ranges[pricing.ranges.length - 1].maxDiameterMm}mm carbide end mills can often be reground instead of replaced.
           </p>
 
           <p className="mt-5 text-charcoal/60 max-w-lg leading-relaxed">

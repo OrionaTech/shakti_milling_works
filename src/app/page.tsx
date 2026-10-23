@@ -16,11 +16,12 @@ import ServiceCoverage from "@/components/ServiceCoverage";
 import FlyerDownload from "@/components/FlyerDownload";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/metadata";
+import { site } from "@/lib/site";
 
 export function generateMetadata(): Metadata {
   return pageMetadata({
     title: "End Mill Regrinding in Yamunanagar | Shakti",
-    description: "End mill regrinding in Yamunanagar, Haryana, from Shakti Milling Works. Courier orders are accepted from across India.",
+    description: site.homeDescription,
     path: "/",
   });
 }

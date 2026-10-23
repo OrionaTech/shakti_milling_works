@@ -1,6 +1,7 @@
 export const site = {
   url: "https://shaktimillingworks.in",
   host: "shaktimillingworks.in",
+  homeDescription: "End mill regrinding in Yamunanagar, Haryana, from Shakti Milling Works. Courier orders are accepted from across India.",
   name: "Shakti Milling Works",
   ownerName: "Balram",
   gstin: "06GLRPK9430C1ZV",
@@ -46,7 +47,7 @@ export const site = {
     opens: "09:00",
     closes: "18:00",
   },
-  mapsDirectionsUrl: "https://www.google.com/maps/dir//SHAKTI+MILLING+WORKS,+Aurangabad,+Yamuna+Nagar,+Haryana+135002/@30.0969664,77.2290188,3014m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0x390ef942dbc03141:0xc9e820f8a58b7917!2m2!1d77.2309723!2d30.1036325?entry=ttu&g_ep=EgoyMDI2MTAxOS4wIKXMDSoASAFQAw%3D%3D",
+  mapsDirectionsUrl: "https://maps.app.goo.gl/xJxmB2SE3GFvf6rq6",
   feedbackUrl: "https://tally.so/r/o9bK7b",
   feedbackFormId: "o9bK7b",
   socialLinks: ["https://youtube.com/@shaktimillingworks", "https://www.instagram.com/shaktimillingworks"],
@@ -56,8 +57,8 @@ export const pricing = {
   startingAt: "₹50 per piece",
   ranges: [
     { minDiameterMm: 4, maxDiameterMm: 8, priceInr: 50, fluteCount: "2–6 flutes", label: "4–8 mm" },
-    { minDiameterMm: 9, maxDiameterMm: 12, priceInr: 80, fluteCount: "2–6 flutes", label: "9–12 mm" },
-    { minDiameterMm: 14, maxDiameterMm: 20, priceInr: 120, fluteCount: "2–6 flutes", label: "14–20 mm" },
+    { minDiameterMm: 8, maxDiameterMm: 12, priceInr: 80, fluteCount: "2–6 flutes", label: "over 8 up to 12 mm" },
+    { minDiameterMm: 12, maxDiameterMm: 20, priceInr: 120, fluteCount: "2–6 flutes", label: "over 12 up to 20 mm" },
   ],
 } as const;
 

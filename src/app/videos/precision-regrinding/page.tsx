@@ -16,17 +16,14 @@ export function generateMetadata(): Metadata {
 const videoObject = {
   "@context": "https://schema.org",
   "@type": "VideoObject",
+  "@id": `${site.url}/videos/precision-regrinding#video`,
   name: "Precision Carbide End Mill Regrinding",
   description: "Watch the regrinding process used to restore suitable tungsten carbide end mills, cutting edges and tool geometry.",
   thumbnailUrl: [thumbnailUrl],
   uploadDate: "2026-08-11",
   contentUrl: videoUrl,
   embedUrl: pageUrl,
-  publisher: {
-    "@type": "Organization",
-    name: "Shakti Milling Works",
-    url: site.url,
-  },
+  publisher: { "@id": `${site.url}/#business` },
 };
 
 export default function PrecisionRegrindingVideoPage() {
