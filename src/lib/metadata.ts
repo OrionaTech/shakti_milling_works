@@ -23,7 +23,7 @@ export function pageMetadata({ title, description, path, type = "website" }: Pag
       siteName: site.name,
       title,
       description,
-      images: [{ url: image, width: 1200, height: 630, alt: `${site.name} carbide end mill regrinding` }],
+      images: [{ url: image, width: 1200, height: 630, alt: `${site.name} carbide cutting tool regrinding services` }],
     },
     twitter: {
       card: "summary_large_image",

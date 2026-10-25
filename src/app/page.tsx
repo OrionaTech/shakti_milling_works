@@ -6,7 +6,6 @@ import Gallery from "@/components/Gallery";
 import WhyRegrind from "@/components/WhyRegrind";
 import HowItWorks from "@/components/HowItWorks";
 import Industries from "@/components/Industries";
-import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -15,6 +14,7 @@ import TrustStrip from "@/components/TrustStrip";
 import ServiceCoverage from "@/components/ServiceCoverage";
 import FlyerDownload from "@/components/FlyerDownload";
 import About from "@/components/About";
+import ServiceHighlights from "@/components/ServiceHighlights";
 import type { Metadata } from "next";
 import { pageMetadata } from "@/lib/metadata";
 import { site } from "@/lib/site";
@@ -39,6 +39,7 @@ export default function Home() {
       <main>
         <Hero />
          <Solution />
+        <ServiceHighlights />
         <Gallery />
 
         <TrustStrip />
@@ -56,8 +57,6 @@ export default function Home() {
         <FlyerDownload />
 
         <About />
-
-        {/* <FAQ /> */}
 
         <Contact />
       </main>

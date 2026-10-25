@@ -40,7 +40,12 @@ export default function Footer() {
               Services
             </p>
 
-            <div className="space-y-3 text-sm text-white/60">{services.map((service) => <Link key={service.slug} href={`/services/${service.slug}`} className="block hover:text-spark transition-colors">{service.name}</Link>)}</div>
+            <div className="space-y-3 text-sm text-white/60">
+              <Link href="/services" className="block hover:text-spark transition-colors">All Services</Link>
+              <Link href="/services/end-mill-regrinding" className="block hover:text-spark transition-colors">End Mill Regrinding</Link>
+              <Link href="/services/carbide-insert-regrinding" className="block hover:text-spark transition-colors">Carbide Insert Regrinding</Link>
+              {services.map((service) => <Link key={service.slug} href={`/services/${service.slug}`} className="block hover:text-spark transition-colors">{service.name}</Link>)}
+            </div>
           </div>
 
           {/* LOCATION */}
@@ -54,7 +59,7 @@ export default function Footer() {
               <p>GSTIN: {site.gstin}</p>
               <a href={`tel:${site.contact.primaryPhoneE164}`} className="block hover:text-spark">{site.contact.primaryPhoneDisplay}</a>
               <a href={`tel:${site.contact.secondaryPhoneE164}`} className="block hover:text-spark">{site.contact.secondaryPhoneDisplay}</a>
-              <a href={`mailto:${site.contact.emailSender}`} className="block hover:text-spark">{site.contact.emailSender}</a>
+              <a href={`mailto:${site.contact.email}`} className="block hover:text-spark">{site.contact.email}</a>
               <p>{site.contact.hours}</p>
               <a href="/contact.vcf" download className="block hover:text-spark">Save contact card</a>
               {tierOneLocations.map((location) => <Link key={location.slug} href={`/locations/${location.slug}`} className="block hover:text-spark">{location.city}</Link>)}

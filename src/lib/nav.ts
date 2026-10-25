@@ -3,6 +3,9 @@ import { tierOneLocations } from "@/lib/site";
 export type NavLink = { label: string; href: string };
 
 export const services: NavLink[] = [
+  { label: "All Services", href: "/services" },
+  { label: "End Mill Regrinding", href: "/services/end-mill-regrinding" },
+  { label: "Carbide Insert Regrinding", href: "/services/carbide-insert-regrinding" },
   { label: "Ball Nose End Mill Regrinding", href: "/services/ball-nose-end-mill-regrinding" },
   { label: "Drill Bit Regrinding", href: "/services/drill-bit-regrinding" },
   { label: "Chamfer & Corner Radius", href: "/services/chamfer-and-corner-radius-regrinding" },

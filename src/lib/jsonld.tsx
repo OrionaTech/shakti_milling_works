@@ -44,7 +44,7 @@ export function homeGraph() {
         image: site.imageUrl,
         description: site.homeDescription,
         telephone: site.contact.primaryPhoneE164,
-        email: site.contact.emailSender,
+        email: site.contact.email,
         priceRange: "₹50–₹120 per piece",
         taxID: site.gstin,
         address: {
@@ -97,6 +97,38 @@ export function homeGraph() {
         offers,
       },
     ],
+  };
+}
+
+export function localBusinessJsonLd() {
+  return {
+    "@context": schemaUrl,
+    "@type": "LocalBusiness",
+    "@id": businessId,
+    name: site.name,
+    url: site.url,
+    logo: { "@type": "ImageObject", url: site.logoUrl },
+    image: site.imageUrl,
+    description: site.homeDescription,
+    telephone: site.contact.primaryPhoneE164,
+    email: site.contact.email,
+    address: {
+      "@type": "PostalAddress",
+      ...site.addressParts,
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: site.geo.latitude,
+      longitude: site.geo.longitude,
+    },
+    areaServed: { "@type": "Country", name: "India" },
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: site.openingHours.days.map((day) => `${schemaUrl}/${day}`),
+      opens: site.openingHours.opens,
+      closes: site.openingHours.closes,
+    },
+    sameAs: site.socialLinks,
   };
 }
 

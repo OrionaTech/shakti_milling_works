@@ -131,7 +131,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-xs uppercase tracking-widest text-white/30">Email</p>
-                  <a href={`mailto:${site.contact.emailSender}`} className="mt-1 inline-block font-semibold text-white hover:text-spark transition-colors">{site.contact.emailSender}</a>
+                  <a href={`mailto:${site.contact.email}`} className="mt-1 inline-block font-semibold text-white hover:text-spark transition-colors">{site.contact.email}</a>
                 </div>
 
               </div>
