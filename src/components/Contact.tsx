@@ -2,6 +2,7 @@ import PricingGuide from "@/components/PricingGuide";
 import TrackedLink from "@/components/TrackedLink";
 import { site } from "@/lib/site";
 import FeedbackPopupButton from "@/components/FeedbackPopupButton";
+import ContactForm from "@/components/ContactForm";
 
 const whatsappMessage = encodeURIComponent(
   `Hi Shakti Milling Works,
@@ -138,6 +139,8 @@ export default function Contact() {
             </div>
           </div>
         </div>
+
+        <ContactForm />
 
         {/* BOTTOM CTA */}
         <div className="mt-10 border-t border-white/10 pt-8 flex flex-col md:flex-row md:items-center justify-between gap-5">
